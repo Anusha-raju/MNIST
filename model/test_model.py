@@ -5,7 +5,7 @@ from tensorflow.keras.datasets import mnist
 tf.config.set_visible_devices([], 'GPU')
 
 # Load the model
-model = tf.keras.models.load_model('/home/anusha/workspace/ERA/session5/MNIST/model/mnist_model.h5')
+model = tf.keras.models.load_model('/MNIST/model/mnist_model.h5')
 
 # Load MNIST dataset
 (_, _), (x_test, y_test) = mnist.load_data()
