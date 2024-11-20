@@ -6,17 +6,29 @@ This project implements a basic Continuous Integration/Continuous Deployment (CI
 
 
 ml_project/
+
 │
+
 ├── .github/
+
 │ └── workflows/
+
 │ └── ci-cd.yml
+
 │
+
 ├── model/
+
 │ ├── train.py
+
 │ ├── test_model.py
+
 │ └── requirements.txt
+
 │
+
 ├── requirements.txt
+
 └── README.md
 
 
