@@ -1,5 +1,5 @@
 # MNIST DNN CI/CD Pipeline
-![Build Status](https://github.com/Anusha-raju/MNIST/actions/workflows/ci.yml/badge.svg)
+[![CI/CD Pipeline](https://github.com/Anusha-raju/MNIST/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Anusha-raju/MNIST/actions/workflows/ci-cd.yml)
 
 This project implements a basic Continuous Integration/Continuous Deployment (CI/CD) pipeline for a machine learning project using a Deep Neural Network (DNN) to classify handwritten digits from the MNIST dataset. The pipeline includes automated testing for the model, validation checks, and a simple deployment process.
 
