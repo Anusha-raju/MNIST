@@ -24,8 +24,6 @@ ml_project/
 
 │ ├── test_model.py
 
-│ └── requirements.txt
-
 │
 
 ├── requirements.txt
