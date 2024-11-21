@@ -39,6 +39,7 @@ ml_project/
 - Python 3.8 or higher
 - TensorFlow
 - NumPy
+- Matplotlib
 
 You can install the required packages using the following command:
 ```
