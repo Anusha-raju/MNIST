@@ -45,6 +45,21 @@ You can install the required packages using the following command:
 pip install -r requirements.txt
 ```
 
+## Dataset: MNIST
+The MNIST (Modified National Institute of Standards and Technology) dataset is a collection of 28x28 grayscale images of handwritten digits (0-9). The dataset contains 60,000 training images and 10,000 test images.
+
+## Image Augmentation Techniques
+In this project, we use TensorFlow's ImageDataGenerator to apply a set of augmentation transformations to the training images. The following transformations are applied randomly to each image during the training process:
+
+1. ***Rotation***: The image is randomly rotated within a range of ±20 degrees.
+
+2. ***Width and Height Shift***: The image is randomly shifted horizontally (left or right) or vertically (up or down) by up to 20% of the total width/height.
+
+3. ***Shear***: The image undergoes a shear transformation by up to 20%, causing it to be tilted along the X or Y axis.
+
+4. ***Zoom***: The image is randomly zoomed in or out by up to 20%.
+
+5. ***Fill Mode***: After applying any of the above transformations, any empty pixels (i.e., those created by shifting, rotating, or zooming) are filled using the nearest pixel value.
 
 
 ## Model Training
@@ -53,6 +68,7 @@ The model is defined in `train.py`, which includes the following steps:
 
 1. Load the MNIST dataset.
 2. Preprocess the data (reshape and normalize).
+3. Image Augmentation (Rotation,Width and Height Shifts, Shear, Zoom, Fill Mode)
 3. Build a 3-layer DNN with convolutional and fully connected layers.
 4. Compile the model.
 5. Train the model for 1 epoch.
@@ -71,10 +87,16 @@ python model/train.py
 
 The testing script `test_model.py` performs the following checks:
 
-1. Validates the input shape of the model.
-2. Validates the output shape of the model.
-3. Checks that the model has fewer than 100,000 parameters.
-4. Evaluates the model's accuracy and ensures it is above 80%.
+1. Validates the model's input shape to ensure it matches (28, 28, 1).
+2. Validates the model's output shape to ensure it matches (10,) for digit classification.
+3. Checks that the model has fewer than 25,000 parameters.
+4. Evaluates the model's accuracy on the test set, ensuring it exceeds 95%.
+5. Verifies the model's accuracy on the training set is above 95%.
+6. Ensures the test loss is below 0.5 to avoid overfitting.
+7. Compares the training and test accuracies to check for overfitting.
+8. Confirms that model predictions are consistent for the same input.
+9. Measures prediction time for 10 samples, ensuring it’s under 1 second.
+10. Monitors the model's memory usage, ensuring it’s below 1 GB.
 
 ### Running the Testing Script
 
