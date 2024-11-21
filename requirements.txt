@@ -4,3 +4,4 @@ scipy
 tensorboard
 tensorboard-data-server
 tensorflow
+psutil
